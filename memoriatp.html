@@ -3,78 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memoria Activa — 50 Años</title>
+  <title>Memoria Activa - 50 Años | UNAHUR</title>
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS Personalizado -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark">
+  <!-- 1. Header / Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#">🕊️ Memoria Activa</a>
+      <a class="navbar-brand fw-bold" href="#">Memoria Activa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#linea-tiempo">Línea de Tiempo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tarjeta">Tarjeta Conmemorativa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#adhesion">Adhesión</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero text-white bg-secondary text-center py-5">
-    <h1>50 años. Memoria, Verdad y Justicia.</h1>
-    <p id="contador-anios" class="fs-4"></p>
-    <a href="#adhesion" class="btn btn-light">Sumate</a>
-  </section>
+  <!-- 2. Hero Section -->
+  <header id="hero" class="bg-dark text-white text-center py-5 hero-section">
+    <div class="container py-4">
+      <h1 class="display-3 fw-bold mb-3">50 Años</h1>
+      <p class="fs-4 text-secondary mb-4">Memoria, Verdad y Justicia (1976 – <span id="current-year">2026</span>)[cite: 2, 5]</p>
+      <p class="lead max-width-600 mx-auto" id="contador-memoria">
+        Cargando años de memoria...
+      </p>
+      <a href="#linea-tiempo" class="btn btn-outline-light btn-lg mt-3">Recorrer la Historia</a>
+    </div>
+  </header>
 
-  <!-- Testimonios -->
-  <section id="testimonios" class="py-5 bg-light">
+  <main class="container my-5">
+
+    <!-- 3. Línea de Tiempo Mejorada (Hitos Históricos) -->
+    <section id="linea-tiempo" class="mb-5 py-4">
+      <div class="text-center mb-5">
+        <span class="badge bg-dark text-uppercase px-3 py-2 mb-2">Recorrido Histórico</span>
+        <h2 class="fw-bold">Línea de Tiempo: 50 Años de Lucha</h2>
+        <p class="text-muted">Hitos fundamentales en la construcción de nuestra democracia y derechos humanos.</p>
+      </div>
+
+      <div class="timeline-mejorada">
+        
+        <!-- Hito 1 -->
+        <div class="timeline-row">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-box">24 de Marzo de 1976</div>
+          <div class="timeline-card-box">
+            <h4>Golpe Cívico-Militar</h4>
+            <p>Se instaura la dictadura militar que dio inicio al período más oscuro de violaciones sistemáticas a los derechos humanos en el país.</p>
+          </div>
+        </div>
+
+        <!-- Hito 2 -->
+        <div class="timeline-row">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-box">30 de Abril de 1977</div>
+          <div class="timeline-card-box">
+            <h4>Primera Ronda de Madres</h4>
+            <p>Las Madres de Plaza de Mayo comienzan sus rondas históricas en reclamo por la aparición con vida de sus hijos detenidos-desaparecidos.</p>
+          </div>
+        </div>
+
+        <!-- Hito 3 -->
+        <div class="timeline-row">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-box">10 de Diciembre de 1983</div>
+          <div class="timeline-card-box">
+            <h4>Retorno a la Democracia</h4>
+            <p>Asume el gobierno constitucional de Raúl Alfonsín, restituyendo el estado de derecho y las garantías constitucionales.</p>
+          </div>
+        </div>
+
+        <!-- Hito 4 -->
+        <div class="timeline-row">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-box">1985</div>
+          <div class="timeline-card-box">
+            <h4>Juicio a las Juntas</h4>
+            <p>Un hecho histórico e inédito a nivel mundial donde se juzgó y condenó a los máximos responsables de los crímenes de la dictadura.</p>
+          </div>
+        </div>
+
+        <!-- Hito 5 -->
+        <div class="timeline-row">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-box">24 de Marzo de 2004</div>
+          <div class="timeline-card-box">
+            <h4>Recuperación de la ESMA</h4>
+            <p>Se desocupa el predio de la ex-ESMA para transformarlo en un Espacio para la Memoria y la Promoción de los Derechos Humanos.</p>
+          </div>
+        </div>
+
+        <!-- Hito 6 -->
+        <div class="timeline-row">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-box">2026</div>
+          <div class="timeline-card-box">
+            <h4>50 Años de Memoria Activa</h4>
+            <p>A medio siglo del golpe, las universidades públicas como UNAHUR renuevan el compromiso inquebrantable con el Nunca Más[cite: 2, 4, 5].</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- 4. Archivo de Testimonios + Buscador JS -->
+    <section id="testimonios" class="mb-5">
+      <h2 class="text-center mb-3">Archivo de Testimonios</h2>
+      <p class="text-center text-muted mb-4">Busca reflexiones e historias por palabra clave[cite: 5]</p>
+
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <input type="text" id="buscador" class="form-control form-control-lg shadow-sm" placeholder="Buscar testimonio por palabra o autor...">
+        </div>
+      </div>
+
+      <div class="row g-4" id="contenedor-testimonios">
+        <div class="col-md-4 testimonio-card" data-texto="la memoria es una herramienta de construcción futura y justicia">
+          <div class="card h-100 shadow-sm border-0 bg-light">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0 fs-6">
+                <p>"La memoria no es para quedarse en el pasado, es la herramienta para construir un futuro libre de violencia institucional."</p>
+                <footer class="blockquote-footer mt-2">Estudiante de UNAHUR</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 testimonio-card" data-texto="verdad justicia derechos humanos organizacion universitaria">
+          <div class="card h-100 shadow-sm border-0 bg-light">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0 fs-6">
+                <p>"Mantener vivas las banderas de Memoria, Verdad y Justicia dentro del ámbito universitario nos forma como profesionales comprometidos."</p>
+                <footer class="blockquote-footer mt-2">Docente de Informática</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 testimonio-card" data-texto="nunca mas derechos democracia historia identidad">
+          <div class="card h-100 shadow-sm border-0 bg-light">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0 fs-6">
+                <p>"El 'Nunca Más' debe practicarse todos los días en la defensa activa de nuestros derechos comunitarios y sociales."</p>
+                <footer class="blockquote-footer mt-2">Vecino de Hurlingham</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sin-resultados" class="text-center text-muted mt-3 d-none">
+        <p>No se encontraron testimonios que coincidan con la búsqueda.</p>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- 5. Generador Dinámico de Tarjeta Conmemorativa (JS) -->
+    <section id="tarjeta" class="mb-5">
+      <h2 class="text-center mb-4">Genera tu Tarjeta Conmemorativa</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card p-4 shadow-sm border-0 bg-light">
+            <form id="form-tarjeta">
+              <div class="mb-3">
+                <label for="nombre-tarjeta" class="form-label fw-bold">Tu Nombre</label>
+                <input type="text" class="form-control" id="nombre-tarjeta" placeholder="Ej: Sheina Vera" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje-tarjeta" class="form-label fw-bold">Tu Reflexión / Mensaje por los 50 años</label>
+                <textarea class="form-control" id="mensaje-tarjeta" rows="3" placeholder="Ej: Por más memoria y democracia siempre..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark w-100">Generar Tarjeta</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div id="vista-previa-tarjeta" class="d-flex align-items-center justify-content-center h-100 border rounded bg-white p-3 shadow-sm">
+            <p class="text-muted text-center m-0">Completa el formulario para previsualizar y generar tu tarjeta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- 6. Formulario de Adhesión (con Validación JS) -->
+    <section id="adhesion" class="mb-5">
+      <h2 class="text-center mb-4">Formulario de Adhesión a la Campaña</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card p-4 shadow-sm border-0 bg-light">
+            <div id="alerta-formulario" class="alert d-none" role="alert"></div>
+            
+            <form id="form-adhesion" novalidate>
+              <div class="mb-3">
+                <label for="nombre-completo" class="form-label fw-bold">Nombre Completo *</label>
+                <input type="text" class="form-control" id="nombre-completo" required>
+                <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Correo Electrónico *</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="rol" class="form-label fw-bold">Vinculación / Rol *</label>
+                <select class="form-select" id="rol" required>
+                  <option value="">Selecciona una opción...</option>
+                  <option value="Estudiante">Estudiante</option>
+                  <option value="Docente">Docente</option>
+                  <option value="Nodocente">Nodocente</option>
+                  <option value="Comunidad">Comunidad / Graduado</option>
+                </select>
+                <div class="invalid-feedback">Por favor, selecciona tu vínculo.</div>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="check-condiciones" required>
+                <label class="form-check-label" for="check-condiciones">Adhiero a la consigna institucional Memoria, Verdad y Justicia.</label>
+                <div class="invalid-feedback">Debes marcar esta casilla para adherir.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">Enviar Adhesión</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. Footer Mejorado con "Nunca Más" -->
+  <footer class="bg-black text-white text-center py-4 mt-auto border-top border-secondary">
     <div class="container">
-      <h2 class="mb-4">Archivo de Testimonios</h2>
-      <input id="buscador" class="form-control mb-4" placeholder="Buscar testimonios...">
-      <div class="row g-4" id="lista-testimonios">
-        <div class="col-md-4 testimonio">
-          <div class="card p-3 h-100">
-            <p>"Nunca más el silencio. Memoria activa, presente y futuro."</p>
-          </div>
-        </div>
-        <div class="col-md-4 testimonio">
-          <div class="card p-3 h-100">
-            <p>"La búsqueda que no cesa."</p>
-          </div>
-        </div>
-        <div class="col-md-4 testimonio">
-          <div class="card p-3 h-100">
-            <p>"Por la verdad y la justicia de nuestros compañeros."</p>
-          </div>
-        </div>
-      </div>
+      <h3 class="fw-bold tracking-wider text-uppercase text-light mb-2">¡NUNCA MÁS!</h3>
+      <p class="text-secondary small mb-1">Memoria, Verdad y Justicia (1976 - 2026)[cite: 2]</p>
+      <p class="text-muted small mb-0">Programando con Memoria | Lenguajes Informáticos 1 - UNAHUR[cite: 2, 3]</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- Generador de tarjeta -->
-  <section id="tarjeta" class="py-5">
-    <div class="container text-center">
-      <h2>Generá tu Tarjeta Conmemorativa</h2>
-      <div class="col-md-6 mx-auto">
-        <input id="mensaje-tarjeta" class="form-control mb-3" placeholder="Tu mensaje reflexivo...">
-        <button id="btn-generar" class="btn btn-primary mb-3">Generar tarjeta</button>
-        <div id="tarjeta-resultado"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Formulario de adhesión -->
-  <section id="adhesion" class="py-5 bg-dark text-white">
-    <div class="container text-center">
-      <h2>Formulario de Adhesión</h2>
-      <form id="form-adhesion" class="col-md-6 mx-auto">
-        <div class="input-group mb-3">
-          <input id="nombre-adhesion" class="form-control" placeholder="Tu nombre y apellido">
-          <button type="submit" class="btn btn-warning">Sumarme</button>
-        </div>
-        <p id="msg-adhesion"></p>
-      </form>
-    </div>
-  </section>
-
-  <script src="main.js"></script>
+  <!-- Scripts: Bootstrap y Custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="java.js"></script>
 </body>
 </html>
