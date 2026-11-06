@@ -1,15 +1,152 @@
-.tarjeta-memoria {
-      border: 2px solid #333;
-      padding: 1.5rem;
-      border-radius: 8px;
-      background-color: #f8f9fa;
-      max-width: 500px;
-      margin: 1rem auto;
-      text-align: center;
-    }
-.tarjeta-fecha { font-weight: bold; color: #555; }
-.tarjeta-mensaje { font-size: 1.25rem; font-style: italic; margin: 1rem 0; }
-.tarjeta-firma { font-size: 0.9rem; color: #222; }
-.error { color: #dc3545; font-weight: bold; }
-.exito { color: #198754; font-weight: bold; }
- 
+/* Estilos generales */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #212529;
+  background-color: #ffffff;
+}
+
+.max-width-600 {
+  max-width: 600px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #111111 0%, #2b2b2b 100%);
+}
+
+/* ==========================================================
+   NUEVA LÍNEA DE TIEMPO MODERNA (RESPONSIVE)
+   ================================================---------- */
+.timeline-mejorada {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Línea central vertical */
+.timeline-mejorada::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #dee2e6;
+  transform: translateX(-50%);
+}
+
+.timeline-row {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Punto central indicador */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #0d6efd;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  z-index: 2;
+}
+
+/* Cajas de fecha y contenido alternadas */
+.timeline-date-box {
+  width: 42%;
+  font-weight: bold;
+  color: #0d6efd;
+  font-size: 1.1rem;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.timeline-card-box {
+  width: 42%;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  text-align: left;
+}
+
+.timeline-card-box h4 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #212529;
+}
+
+.timeline-card-box p {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Alternancia de filas (Izquierda / Derecha) */
+.timeline-row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-row:nth-child(odd) .timeline-date-box {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.timeline-row:nth-child(odd) .timeline-card-box {
+  text-align: right;
+}
+
+/* Adaptabilidad para Dispositivos Móviles */
+@media screen and (max-width: 768px) {
+  .timeline-mejorada::before {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  .timeline-row, 
+  .timeline-row:nth-child(odd) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 45px;
+  }
+
+  .timeline-date-box, 
+  .timeline-row:nth-child(odd) .timeline-date-box {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  .timeline-card-box, 
+  .timeline-row:nth-child(odd) .timeline-card-box {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+  }
+}
+
+/* Tarjeta Conmemorativa Dinámica */
+.card-conmemorativa {
+  background: linear-gradient(135deg, #1b2a47 0%, #0d1b2a 100%);
+  color: #ffffff;
+  border-left: 6px solid #0d6efd;
+  border-radius: 10px;
+  padding: 25px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
